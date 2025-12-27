@@ -1,0 +1,9 @@
+1.a)- created and loaded file family.pl
+  b)- i.yes
+      ii.no
+      iii.true? yes
+          true? ; no
+      iv. no
+2.a)- created and loaded file animals.pl
+  b)- i.
+      ii. lives_in(X, forest).

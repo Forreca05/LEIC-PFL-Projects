@@ -1,1 +1,0 @@
-runhaskell Calcultor.hs < input.txt

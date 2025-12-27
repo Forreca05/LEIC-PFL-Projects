@@ -1,0 +1,15 @@
+Command                 Description
+halt.                   Exit Prolog
+[file].                 Load a program from file file.pl
+consult('file.pl').     Same as [file].
+reconsult('file.pl').   Reload file after edits
+listing.                Show all loaded facts and rules
+trace.                  Start trace mode
+notrace.                Stop trace mode
+
+Key             Meaning
+?-              Prompt for a query
+.               Ends the query
+;               Ask for the next solution
+no.             No solutions found
+Error message   Problem in query or program syntax
