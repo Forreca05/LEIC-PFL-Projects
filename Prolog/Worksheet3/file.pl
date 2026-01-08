@@ -1,5 +1,5 @@
 max1(A, B, B):- B >= A, !.
-max1(A, B, A) :- A > B.
+max1(A, B, A):- A > B.
 
 list_size([],0).
 list_size([_|T], N):-

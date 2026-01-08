@@ -70,4 +70,23 @@ e) married(Person1, Person2, Year).
    married(jay, dede, 1968).
    divorced(jay, dede, 2003).
 
- 
+2.a) Feito em family.pl.
+  b) i. teaches(X,diogenes).
+        X = statistics ? 
+        yes
+     ii. teaches(X,felismina).
+         no
+     iii. attends(X,claudio).
+          X = statistics ? ;
+          X = networks ? ;
+          no
+     iv. attends(X,dalmindo).
+         no
+     v. attends(X,eduarda),teaches(X,bernardete).
+        no
+     vi. attends(X,alvaro), attends(X,alberto).
+         no
+  c) Feito em family.pl.
+4.translate(1, 'Integer Overflow').
+  translate(2, 'Division by zero').
+  translate(3, 'ID Unknown').

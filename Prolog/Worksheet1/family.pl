@@ -1,3 +1,4 @@
+:- module(family,[teaches/2, studentColleagues/2, female/1, male/1, siblings/2, mother/2, cousins/2, studentOfProfessor/2, attends/2, halfsiblings/2, parent/2, studentstop/1, teachersOfStudent/2, grandfother/2, professorcoleagues/2, uncle/2, grandmother/2, studentsOfProfessor/2, mutualStudent/2, father/2]).
 female(grace).
 female(claire).
 female(gloria).
@@ -84,3 +85,83 @@ uncle(X,Y):-
     siblings(Z,X),
     male(X).
     
+teaches(algorithms, adalberto).
+teaches(databases, bernardete).
+teaches(compilers, capitolino).
+teaches(statistics, diogenes).
+teaches(networks, ermelinda).
+
+attends(algorithms, alberto).
+attends(algorithms, bruna).
+attends(algorithms, cristina).
+attends(algorithms, diogo).
+attends(algorithms, eduarda).
+attends(databases, antonio).
+attends(databases, bruno).
+attends(databases, cristina).
+attends(databases, duarte).
+attends(databases, eduardo).
+attends(compilers, alberto).
+attends(compilers, bernardo).
+attends(compilers, clara).
+attends(compilers, diana).
+attends(compilers, eurico).
+attends(statistics, antonio).
+attends(statistics, bruna).
+attends(statistics, claudio).
+attends(statistics, duarte).
+attends(statistics, eva).
+attends(networks, alvaro).
+attends(networks, beatriz).
+attends(networks, claudio).
+attends(networks, diana).
+attends(networks, eduardo).
+
+studentOfProfessor(X,Y):-
+    teaches(Z,Y),
+    attends(Z,X).
+
+studentsOfProfessor(X,Y):-
+    teaches(Z,X),
+    attends(Z,Y).
+
+teachersOfStudent(X,Y):-
+    teaches(Z,Y),
+    attends(Z,X).
+
+mutualStudent(X,Y):-
+    studentOfProfessor(X,Z),
+    studentOfProfessor(Y,Z),
+    X \= Y.
+
+studentColleagues(X,Y):-
+    attends(Z,X),
+    attends(Z,Y),
+    X \= Y.
+
+professorcoleagues(X,Y):-
+    teaches(Z,Y),
+    teaches(Z,X),
+    X \= Y.
+
+studentstop(X):-
+    attends(Y,X),
+    attends(Z,X),
+    Z @< Y.
+
+pilot(lamb).
+pilot(besenyei).
+pilot(chambliss).
+pilot(maclean).
+pilot(mangold).
+pilot(jones).
+pilot(bonhomme).
+
+team(lamb, breitling).
+team(besenyei, 'red bull').
+team(chambliss, 'red bull').
+team(maclean, mediterranean).
+team(mangold, cobra).
+team(jones, matador).
+team(bonhomme, matador).
+
