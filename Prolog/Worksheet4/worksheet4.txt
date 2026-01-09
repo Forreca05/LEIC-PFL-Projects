@@ -14,4 +14,4 @@
       one-three
       no
 
-3. All red except the last one.
+3. Only immature is red. The others are mutually exclusive, a person cannot be a spider and a person at the same time.

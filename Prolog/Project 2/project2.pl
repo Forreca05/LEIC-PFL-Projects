@@ -1,3 +1,5 @@
+%:- use_module(library(lists)).
+
 % length(?List, ?Size)
 /* length( [ ], 0 ).
    length( [_|T], L ):-
@@ -58,3 +60,36 @@
 % include(:P, +X, ?L) / include(:P, +X, +Y, ?L) / include(:P, +X, +Y, +Z, ?L) filter / P(x, y) succeeds, L ⊆ X / P(x, y, z) succeeds, L ⊆ X
 % exclude(:P, +X, ?L) / exclude(:P, +X,+Y, ?L) / exclude(:P, +X,+Y,+Z, ?L) 
 % group(:Pred, +List, ?Front, ?Back) Group until predicate fails, splitting the list at that point
+
+
+% read/1 reads a term (by default, from the standard input)
+% • Input needs to end with a period (spans multiple lines)
+% • If a compound term is being read, input must match term being read
+% • Use unnamed variables (_X)
+
+% write/1 writes a term
+% nl/0 prints a new line
+
+% get_char obtains a single character
+% get_code obtains the ASCII code of a single character
+% put_char prints a single character
+% put_code prints a single character given its ASCII code
+% char_code(?Atom, ?Code) allows converting between character and corresponding ASCII code
+% get_byte and put_byte read and write binary data
+% peek_char, peek_code and peek_byte obtain a single character /code / byte without consuming it from the input stream
+% format prints terms with specified formatting options  format("~s", [T]),
+% skip_line skips any input until the end of the line
+
+% see/1 opens a file for reading
+%• The file is used for reading instead of the standard input
+% seen/0 closes the file that was opened for reading
+% tell/1 opens a file for writing
+%• The file is used for writing instead of the standard output
+% told/0 closes the file that was opened for writing
+
+% repeat always succeeds
+%• Can be used to repeat some portion of code until it succeeds
+% between(+Lower, +Upper, ?Number) can be used both to test and generate integers between given bounds
+%• Necessary to include the between library
+
+% atom_length('Q ', L).

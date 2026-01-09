@@ -1,3 +1,5 @@
 1. a)True b)Syntax Error c)True d)True e)True
    f)True g)False h)True i)True j)True k)True l)True
 2. Made in file.pl.
+3. Some functions done in file.pl.
+7. Done in file.pl.
