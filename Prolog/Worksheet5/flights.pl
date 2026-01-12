@@ -11,3 +11,5 @@ flight(madrid, paris, iberia, ib3444, 1640, 125).
 flight(madrid, london, iberia, ib3166, 1550, 145).
 flight(london, madrid, iberia, ib3163, 1030, 140).
 flight(porto, frankfurt, lufthansa, lh1177, 1230, 165).
+
+get_all_nodes
