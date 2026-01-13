@@ -1021,4 +1021,15 @@ RED CUT INFLUENCES THE RESULT
 GREEN CUT ONLY INCREASE EFFICIENCY
 
 A = 4+2 UNIFIES A WITH THE TERM +(4,2), NOT THE VALUE 6
+
+Diferença entre == e :=: em Prolog
+Operador	Significado	Exemplo	Resultado
+==	Igualdade sintática (mesmos termos, mesma estrutura, sem avaliação)	X = 2+2, X == 2+2	true
+:=:	Igualdade aritmética (avalia ambos lados como expressões numéricas)	X = 2+2, X :=: 4	true
+
+xfx só permite um único uso do operador entre dois termos. Ou seja, a borders b borders c não é permitido com xfx, pois o parser não sabe como agrupar.
+xfy permite encadeamento à direita, como a borders b borders c, que será interpretado como a borders (b borders c).
+
+Pensa que os operadores com precedência menor são mais gulosos — agarram os seus argumentos antes dos outros.
+Ficam normalmente dentro dos parenteses e os outros e que ficam fora.
 */
